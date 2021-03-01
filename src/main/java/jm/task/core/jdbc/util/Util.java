@@ -12,11 +12,11 @@ public class Util {
     private static final String USERNAME = "bestuser";
     private static final String PASSWORD = "bestuser";
 
-    private Connection connection;
+    private static Connection connection;
 
     public Util(){   }
 
-    public Connection getUtilConnection() { // геттер приватного поля connection + создаем connection
+    public static Connection getUtilConnection() { // геттер приватного поля connection + создаем connection
         try {
             connection = DriverManager.getConnection(URLFIXED, USERNAME, PASSWORD);
         } catch (SQLException throwables) {
